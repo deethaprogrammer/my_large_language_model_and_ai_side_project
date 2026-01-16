@@ -121,6 +121,6 @@ for iteration in range(start_iter, max_iterations + 1):
             )
         print(f"step {iteration}: train {loss.item():.4f}, val {val_loss.item():.4f}")
         # Auto-save every 25k iterations
-    if iteration > 0 and iteration % 1000 == 0:
+    if iteration > 0 and iteration % 5000 == 0:
         save_checkpoint(model, optimizer, scaler, iteration)
 
